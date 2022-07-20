@@ -15,13 +15,13 @@
   align-items: center;
 }
 
-h1,
+.neonLightText h1,
 h2 {
   text-align: center;
   font-weight: 400;
 }
 
-h1 {
+.neonLightText h1 {
   font-size: 6.2rem;
   animation: pulsate 1.5s infinite alternate;
   border: 0.2rem solid #fff;

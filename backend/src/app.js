@@ -3,7 +3,6 @@ const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const userRoutes = require("./routes/user.routes");
-// const categoryRoutes = require("./routes/category.routes");
 
 const app = express();
 

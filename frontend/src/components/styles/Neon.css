@@ -1,30 +1,29 @@
-.neonText {
+.neonText-container {
   color: #fff;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
 }
 
-body {
+.neonText body {
   font-size: 18px;
-  font-family: "Vibur", sans-serif;
+  /* font-family: "Vibur", sans-serif; */
   background-color: #010a01;
 }
 
-h1,
-h2 {
+.titles-neonText {
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
 }
 
-h1 {
+.title1-neonText {
   font-size: 4.2rem;
 }
 
-h2 {
+.title2-neonText {
   font-size: 1.8rem;
 }
 
-.container {
+.neonText-container {
   margin-top: 20vh;
 }

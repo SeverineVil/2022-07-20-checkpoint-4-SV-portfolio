@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const models = require("../models");
 
 class UserController {
-  static register = async (req, res) => {
+  static add = async (req, res) => {
     const { email, password, role } = req.body;
 
     const [user] = await models.user.findAll();
