@@ -1,0 +1,101 @@
+.loginadmin {
+  background-color: lightgrey;
+  width: 100vw;
+  height: 100vh;
+}
+
+.admin-login-top {
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.logo-admin-rond-login {
+  width: 5rem;
+  height: 5rem;
+}
+
+.admin-login-top h1 {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+}
+
+.form-login-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.inputPseudoAdmin,
+.inputLogPasswordAdmin {
+  width: 90vw;
+  border-radius: 10px;
+  height: 3.5rem;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.inputPseudoAdmin,
+.inputLogPasswordAdmin,
+::placeholder {
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: lightgrey;
+}
+
+.inputLogPasswordAdmin,
+.inputPseudoAdmin {
+  color: var(--dark-blue);
+}
+
+.inputLogPasswordAdmin {
+  margin-bottom: 10vh;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .inputPseudoAdmin,
+  .inputLogPasswordAdmin {
+    width: 50vw;
+    border-radius: 10px;
+    height: 4rem;
+  }
+
+  .admin-login-top h1 {
+    font-size: 2rem;
+  }
+
+  .logo-admin-rond-login {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .inputLogPasswordAdmin,
+  .inputPseudoAdmin {
+    width: 30vw;
+    height: 3.8rem;
+  }
+  .inputLogPasswordAdmin {
+    margin-bottom: 15vh;
+  }
+  .admin-login-top {
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+  }
+  .admin-login-top h1 {
+    font-size: 1.5rem;
+    margin-left: 4rem;
+  }
+  .logo-admin-rond-login {
+    width: 8rem;
+    height: 8rem;
+  }
+}

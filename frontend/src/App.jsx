@@ -1,13 +1,25 @@
-import Home from "@pages/Home";
-
-import "./App.css";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import LoginAdmin from "./pages/LoginAdmin";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
+    <Router>
+      <div className="app">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/loginadmin" element={<LoginAdmin />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
