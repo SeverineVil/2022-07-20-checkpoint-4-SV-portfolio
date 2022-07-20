@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles/LoginAdmin.css";
+import "./styles/Login.css";
 import axios from "axios";
 import swal from "sweetalert";
 
-function LoginAdmin() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,9 +15,9 @@ function LoginAdmin() {
     if (!email || !password) {
       swal({
         title: "Error!",
-        text: "Merci de renseigner votre pseudo ET votre email",
+        text: "Merci de renseigner votre mail ET votre mot de passe",
         icon: "error",
-        confirmButtonText: "Cool",
+        button: "OK",
       });
     } else {
       axios
@@ -34,28 +34,21 @@ function LoginAdmin() {
   };
 
   return (
-    <div className="loginadmin">
-      <div className="admin-login-top">
-        <h1>Bienvenue Aline et Lila</h1>
-        <img
-          className="logo-admin-rond-login"
-          // src={logoCircle}
-          alt="logo Dear rond"
-        />
-      </div>
-      <div className="formloginadmin">
-        <form className="form-login-admin">
+    <div className="login">
+      <div className="buttonreturnlogin" />
+      <div className="formlogin">
+        <form className="form-login">
           <input
-            className="inputPseudoAdmin"
+            className="inputEmail"
             type="text"
-            name="pseudo"
-            id="pseudo"
-            placeholder="Lila ou Aline"
+            name="email"
+            id="email"
+            placeholder="me"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            className="inputLogPasswordAdmin"
+            className="inputLogPassword"
             type="password"
             name="password"
             id="password"
@@ -82,4 +75,4 @@ function LoginAdmin() {
   );
 }
 
-export default LoginAdmin;
+export default Login;

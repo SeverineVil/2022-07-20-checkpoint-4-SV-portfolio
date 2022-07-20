@@ -2,7 +2,13 @@ import React from "react";
 import "./styles/NeonLight.css";
 
 function NeonLight() {
-  return <h1 className="neonLightText">neon lights</h1>;
+  return (
+    <div className="neonLightText-container">
+      <div className="title-neonText">
+        <h1 className="title1-neonText">Neon lights</h1>
+      </div>
+    </div>
+  );
 }
 
 export default NeonLight;

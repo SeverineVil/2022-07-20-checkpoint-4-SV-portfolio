@@ -1,0 +1,47 @@
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17vh;
+}
+
+.inputEmail,
+.inputLogPassword {
+  width: 50vw;
+  border-radius: 10px;
+  height: 3.5rem;
+  background-color: #363537;
+  margin-bottom: 40px;
+}
+
+.inputEmail,
+.inputLogPassword,
+::placeholder {
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.inputLogPassword,
+.inputEmail {
+  color: pink;
+}
+
+.inputLogPassword {
+  margin-bottom: 10vh;
+}
+
+.logButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 500px;
+  height: 15vw;
+  max-height: 70px;
+  background-color: var(--mint-blue);
+  color: var(--white);
+  border-radius: 10px;
+  font-family: var(--font);
+  text-decoration: none;
+}

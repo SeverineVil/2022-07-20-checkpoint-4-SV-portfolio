@@ -1,11 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import Neon from "../components/Neon";
+import Home from "./Home";
+import Login from "./Login";
 
 function Body() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Neon />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Login />} />
       </Routes>
     </div>
   );

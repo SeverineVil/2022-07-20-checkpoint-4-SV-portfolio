@@ -39,3 +39,6 @@ CREATE TABLE `tech` (
 ALTER TABLE `projects` ADD FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`);
 
 ALTER TABLE `projects` ADD FOREIGN KEY (`techId`) REFERENCES `tech` (`id`);
+
+INSERT INTO user (email, password, role) VALUES 
+("severinevilleneuve@gmail.com", "$2y$10$OAthdG/cGOlL7c6HMq8kyeWnXaxgfux8zdYcjqTEV4sIejqDYXfCK", "ROLE_ADMIN"),

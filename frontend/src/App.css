@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100");
 
+:root {
+  --primary-color: #010a01;
+}
 * {
   font-family: "Roboto Mono", monospace;
-  background: #212121;
   min-height: 100%;
   margin: 0;
   padding: 0;
