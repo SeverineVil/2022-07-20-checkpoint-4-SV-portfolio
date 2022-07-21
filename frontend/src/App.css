@@ -2,6 +2,8 @@
 
 :root {
   --primary-color: #010a01;
+  --secondary-color: #ffc800;
+  --third-color: #ef2d56;
 }
 * {
   font-family: "Roboto Mono", monospace;
