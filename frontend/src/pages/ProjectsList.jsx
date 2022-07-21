@@ -8,10 +8,10 @@ function ProjectsList() {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/projects`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/project`)
       .then((res) => setProjects(res.data))
       .catch((err) => {
-        console.error(err);
+        console.warn(err.response.data.error);
       });
   }, []);
 

@@ -1,16 +1,18 @@
 import "./styles/Project.css";
 import propTypes from "prop-types";
 
-function Project(project) {
-  const { image, name, description, url } = project;
+function Project({ project }) {
   return (
     <div className="project-container">
       <div className="card">
-        <img className="img" src={image} alt={`${name} cover`} />
+        <img className="card-img" src={project.image} alt="pic" />
         <div className="texts">
-          <h2>{name}</h2>
-          <p>{description}</p>
-          <button type="submit">More details..{url}</button>
+          <h2>{project.name}</h2>
+          <p>{project.description}</p>
+
+          <button className="card-button" type="submit">
+            More details..{project.url}
+          </button>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const userRoutes = require("./routes/user.routes");
+const projectRoutes = require("./routes/project.routes");
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 // API routes
 app.use(userRoutes);
+app.use(projectRoutes);
 // app.use(categoryRoutes);
 
 // Redirect all requests to the REACT app

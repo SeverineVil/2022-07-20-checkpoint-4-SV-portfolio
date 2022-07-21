@@ -108,7 +108,7 @@ nav a.navbarLink.active {
     height: 3px;
     position: relative;
     border-radius: 3px;
-    background: green;
+    /* background: green; */
     transition: all 0.4s ease-in-out;
   }
 

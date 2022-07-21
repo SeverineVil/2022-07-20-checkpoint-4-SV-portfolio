@@ -11,9 +11,7 @@ class ProjectManager extends AbstractManager {
   }
 
   findAll() {
-    return this.connection.query(
-      `select project.*, category.name AS category FROM ${ProjectManager.table} JOIN category ON category.id= project.category_id`
-    );
+    return this.connection.query(`select * FROM ${ProjectManager.table}`);
   }
 
   find(id) {

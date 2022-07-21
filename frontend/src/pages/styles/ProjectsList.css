@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: var(--primary-color);
 }
 
 .projects-container {
@@ -9,5 +9,5 @@ body {
   justify-content: center;
 }
 .projects-container-title {
-  color: white;
+  color: black;
 }
