@@ -16,7 +16,7 @@ class UserController {
 
     const validationErrors = Joi.object({
       email: Joi.string().email().max(255).required(),
-      password: Joi.string().max(15).required(),
+      password: Joi.string().max(150).required(),
     }).validate({ email, password }).error;
 
     if (validationErrors) {
@@ -50,8 +50,8 @@ class UserController {
     const { email, password } = req.body;
 
     const validationErrors = Joi.object({
-      email: Joi.string().max(15).required(),
-      password: Joi.string().max(15).required(),
+      email: Joi.string().max(255).required(),
+      password: Joi.string().max(255).required(),
     }).validate({ email, password }).error;
 
     if (validationErrors) {

@@ -11,8 +11,8 @@ CREATE TABLE `user` (
   
   );
 
-DROP TABLE IF EXISTS `projects`;
-CREATE TABLE `projects` (
+DROP TABLE IF EXISTS `project`;
+CREATE TABLE `project` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255),
   `description` varchar(255),
@@ -36,9 +36,24 @@ CREATE TABLE `tech` (
   `ìmage` icons(255),
 );
   
-ALTER TABLE `projects` ADD FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`);
+ALTER TABLE `project` ADD FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`);
 
-ALTER TABLE `projects` ADD FOREIGN KEY (`techId`) REFERENCES `tech` (`id`);
+ALTER TABLE `project` ADD FOREIGN KEY (`techId`) REFERENCES `tech` (`id`);
 
 INSERT INTO user (email, password, role) VALUES 
-("severinevilleneuve@gmail.com", "$2y$10$OAthdG/cGOlL7c6HMq8kyeWnXaxgfux8zdYcjqTEV4sIejqDYXfCK", "ROLE_ADMIN"),
+("severinevilleneuve@gmail.com", "$2y$10$OAthdG/cGOlL7c6HMq8kyeWnXaxgfux8zdYcjqTEV4sIejqDYXfCK", "ROLE_ADMIN");
+
+INSERT INTO project (name, description, url, image ) VALUES
+("Dear", "A website for Lila & Aline", "https://dear.nantes-1.wilders.dev/", "src/assets/projetDear.png" ),
+("La roue de la malchance", "Hackaton by team", "https://larouedelamalchance.netlify.app/", "src/assets/malchance.png"),
+("Biorama", "A ReactJs website with public API", "https://biorama.netlify.app/", "src/assets/biorama.png");
+
+
+
+INSERT INTO technology (name, icon) VALUES 
+("ReactJs", "src/assets/iconreact.png"),
+("Javasript"),
+("Node Express"),
+("HTML-CSS");
+
+
