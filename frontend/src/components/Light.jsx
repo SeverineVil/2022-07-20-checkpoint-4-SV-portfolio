@@ -8,6 +8,7 @@ function Light() {
         <h1 className="title1-LightText">I </h1>
         <h1 className="title1-LightText">am</h1>
         <h1 className="title1-LightText">Séverine Villeneuve</h1>
+        <h1 className="title1-LightText">Web developper</h1>
       </div>
     </div>
   );

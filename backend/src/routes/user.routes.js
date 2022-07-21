@@ -7,7 +7,7 @@ const { isAdmin } = require("../middlewares/isAdminMiddleware");
 
 routes.get("/users", authorization, isAdmin, UserController.browse);
 routes.post("/users/register", UserController.add);
-routes.post("/users/login", UserController.login);
+routes.post("/users/login", authorization, isAdmin, UserController.login);
 routes.get("/users/logout", authorization, UserController.logout);
 routes.put("/users/:id", UserController.edit);
 routes.delete("/users/:id", UserController.delete);

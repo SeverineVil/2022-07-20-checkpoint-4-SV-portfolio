@@ -1,66 +1,34 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/Header.css";
-import logoSV from "../assets/logoSV.png";
+import jukebox from "../assets/jukebox.jpg";
 
 function Header() {
-  const [showLinks, setShowLinks] = useState(false);
-
-  const handleShowLinks = () => {
-    setShowLinks(!showLinks);
-  };
-
   return (
-    <header>
-      <nav className={`navbar ${showLinks ? "showNav" : null}`}>
+    <div className="navbarContent">
+      <nav>
         <div className="navbarLogo">
-          <NavLink to="/">
-            <img className="logo" src={logoSV} alt="logo" />
-          </NavLink>
+          <Link to="/">
+            <img className="logo" src={jukebox} alt="logo" />
+          </Link>
         </div>
-        <ul className="navbarLinks">
-          <li className="navbarItem slideInDown-1">
-            <NavLink onClick={handleShowLinks} className="navbarLink" to="/">
-              Home
-            </NavLink>
+
+        <ul>
+          <li>
+            <Link to="/"> Home</Link>
           </li>
-          <li className="navbarItem slideInDown-2">
-            <NavLink
-              onClick={handleShowLinks}
-              className="navbarLink"
-              to="/AboutMe"
-            >
-              About me
-            </NavLink>
+          <li>
+            <Link to="/AboutMe">About me</Link>
           </li>
-          <li className="navbarItem slideInDown-3">
-            <NavLink
-              onClick={handleShowLinks}
-              className="navbarLink"
-              to="/Projects"
-            >
-              My projects
-            </NavLink>
+          <li>
+            <Link to="/Projects">My projects</Link>
           </li>
-          <li className="navbarItem slideInDown-4">
-            <NavLink
-              onClick={handleShowLinks}
-              className="navbarLink"
-              to="/Contact"
-            >
-              Contact me
-            </NavLink>
+          <li>
+            <Link to="/Contact">Contact me</Link>
           </li>
         </ul>
-        <button
-          type="button"
-          className="navbarBurger"
-          onClick={handleShowLinks}
-        >
-          <span className="burgerBar" />
-        </button>
       </nav>
-    </header>
+    </div>
   );
 }
 

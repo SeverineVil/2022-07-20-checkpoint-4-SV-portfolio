@@ -10,14 +10,12 @@
 }
 
 .project-container {
-  /* margin: 10px; */
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   text-transform: capitalize;
   position: relative;
-  background-color: pink;
 }
 
 .texts {

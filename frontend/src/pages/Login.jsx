@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./styles/Login.css";
 import axios from "axios";
 import swal from "sweetalert";
+import ButtonReturn from "../components/ButtonReturn";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ function Login() {
         title: "Error!",
         text: "Merci de renseigner votre mail ET votre mot de passe",
         icon: "error",
-        button: "OK",
+        confirmButtonText: "Cool",
       });
     } else {
       axios
@@ -36,6 +37,7 @@ function Login() {
   return (
     <div className="login">
       <div className="buttonreturnlogin" />
+      <ButtonReturn />
       <div className="formlogin">
         <form className="form-login">
           <input
@@ -43,7 +45,7 @@ function Login() {
             type="text"
             name="email"
             id="email"
-            placeholder="me"
+            placeholder="It's me"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -52,21 +54,19 @@ function Login() {
             type="password"
             name="password"
             id="password"
-            placeholder="Mot de passe"
+            placeholder="password please"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className="logButton">
             <button
               style={{
-                marginBottom: "5vh",
                 cursor: "pointer",
               }}
-              className="regbutton"
               type="submit"
               onClick={handleSubmit}
             >
-              REGISTER
+              Go !
             </button>
           </div>
         </form>
