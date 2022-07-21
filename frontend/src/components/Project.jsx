@@ -1,6 +1,11 @@
 import "./styles/Project.css";
 import propTypes from "prop-types";
 
+// handleClick = (e) => {
+//   e.preventDefault();
+//   console.log("The link was clicked !");
+// };
+
 function Project({ project }) {
   return (
     <div className="project-container">
@@ -10,9 +15,11 @@ function Project({ project }) {
           <h2>{project.name}</h2>
           <p>{project.description}</p>
 
-          <button className="card-button" type="submit">
-            More details..{project.url}
-          </button>
+          <a href={project.url} target="_bank">
+            <button className="card-button" type="button">
+              View the website !
+            </button>
+          </a>
         </div>
       </div>
     </div>

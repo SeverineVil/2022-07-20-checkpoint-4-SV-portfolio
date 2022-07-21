@@ -1,0 +1,31 @@
+.buttonreturn {
+  background-color: var(--dark-blue);
+  height: 2rem;
+  width: 2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  border: none;
+}
+.arrow-return {
+  border: none;
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .buttonreturn {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .arrow-return {
+    height: 2rem;
+    margin-left: 28rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arrow-return {
+    margin-left: 33rem;
+  }
+}
