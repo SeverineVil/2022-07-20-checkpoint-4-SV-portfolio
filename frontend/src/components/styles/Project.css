@@ -1,0 +1,30 @@
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  position: relative;
+}
+.card-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.texts h2 {
+  width: 100%;
+  margin-top: 5px;
+  color: white;
+}
+
+.texts p {
+  width: 100%;
+
+  margin-top: 5px;
+  color: white;
+}
+.card-button {
+  background-color: pink;
+}

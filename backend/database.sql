@@ -1,63 +1,59 @@
--- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
---
--- Client :  localhost
--- Généré le :  Jeu 26 Octobre 2017 à 13:53
--- Version du serveur :  5.7.19-0ubuntu0.16.04.1
--- Version de PHP :  7.0.22-0ubuntu0.16.04.1
+CREATE DATABASE IF NOT EXISTS `SV-portfolio`;
+USE `SV-portfolio`;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `email` varchar(255) UNIQUE,
+  `password` varchar(255) NOT NULL,
+   `role` varchar(255)
+  
+  );
+
+DROP TABLE IF EXISTS `project`;
+CREATE TABLE `project` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `name` varchar(255),
+  `description` varchar(255),
+  `url` varchar(2048),
+  `categoryId` int,
+  `techId` int,
+  `createdAt` datetime
+);
+
+DROP TABLE IF EXISTS `technology`;
+CREATE TABLE `technology` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `name` varchar(255),
+  `icon` varchar(255)
+);
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `tech` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `name` varchar(255),
+  `ìmage` icons(255),
+);
+  
+ALTER TABLE `project` ADD FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`);
+
+ALTER TABLE `project` ADD FOREIGN KEY (`techId`) REFERENCES `tech` (`id`);
+
+INSERT INTO user (email, password, role) VALUES 
+("severinevilleneuve@gmail.com", "$2y$10$OAthdG/cGOlL7c6HMq8kyeWnXaxgfux8zdYcjqTEV4sIejqDYXfCK", "ROLE_ADMIN");
+
+INSERT INTO project (name, description, url, image ) VALUES
+("Dear", "A website for Lila & Aline", "https://dear.nantes-1.wilders.dev/", "src/assets/projetDear.png" ),
+("La roue de la malchance", "Hackaton by team", "https://larouedelamalchance.netlify.app/", "src/assets/malchance.png"),
+("Biorama", "A ReactJs website with public API", "https://biorama.netlify.app/", "src/assets/biorama.png");
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de données :  `simple-mvc`
---
+INSERT INTO technology (name, icon) VALUES 
+("ReactJs", "src/assets/iconreact.png"),
+("Javasript"),
+("Node Express"),
+("HTML-CSS");
 
--- --------------------------------------------------------
 
---
--- Structure de la table `item`
---
-
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `item`
---
-
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
-
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

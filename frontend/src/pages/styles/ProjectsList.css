@@ -1,0 +1,13 @@
+body {
+  background-color: var(--primary-color);
+}
+
+.projects-container {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.projects-container-title {
+  color: black;
+}

@@ -1,0 +1,40 @@
+body {
+  background-color: var(--secondary-color);
+}
+
+.admin-top {
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.logo-admin-page {
+  width: 10vw;
+  display: block;
+  border-radius: 50%;
+}
+
+.admin-category {
+  width: 40vw;
+  margin-top: 20px;
+}
+
+.container-admin {
+  display: flex;
+  flex-direction: row;
+
+  height: 70vh;
+  align-items: baseline;
+}
+
+.admin-card {
+  display: flex;
+  width: 42vw;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 35px;
+  margin-left: 12px;
+}
