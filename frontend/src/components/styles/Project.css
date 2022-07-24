@@ -1,7 +1,11 @@
-.card {
-  background-color: #f5f5f5;
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  position: relative;
 }
-
 .card-img {
   height: 150px;
   width: 150px;
@@ -9,32 +13,18 @@
   object-fit: cover;
 }
 
-.project-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  text-transform: capitalize;
-  position: relative;
+.texts h2 {
+  width: 100%;
+  margin-top: 5px;
+  color: white;
 }
 
-.texts {
-  display: flex;
+.texts p {
   width: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
+
   margin-top: 5px;
+  color: white;
 }
-*/ .card-button {
-  border: none;
-  padding: 5px 15px;
-  background: #566270;
-  color: #fff;
-  font-weight: 600;
-  transition: all 0.3s ease-in;
-}
-.card-button:hover {
-  background: #e0e3da;
-  color: #566270;
-  cursor: pointer;
+.card-button {
+  background-color: pink;
 }

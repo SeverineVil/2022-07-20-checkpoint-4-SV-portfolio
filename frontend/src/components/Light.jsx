@@ -5,10 +5,10 @@ function Light() {
   return (
     <div className="Light-container">
       <div className="title-LightText">
-        <h1 className="title1-LightText">I </h1>
-        <h1 className="title1-LightText">am</h1>
-        <h1 className="title1-LightText">Séverine Villeneuve</h1>
-        <h1 className="title1-LightText">Web developper</h1>
+        <p className="title1-LightText">I </p>
+        <p className="title1-LightText">am</p>
+        <p className="title1-LightText">Séverine Villeneuve</p>
+        <p className="title1-LightText">Web developper</p>
       </div>
     </div>
   );

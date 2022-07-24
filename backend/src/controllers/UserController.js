@@ -84,7 +84,7 @@ class UserController {
             } else {
               res
                 .status(403)
-                .send("Le email ou le mot de passe ne sont pas valides");
+                .send("L'email ou le mot de passe ne sont pas valides");
             }
           } catch (err) {
             res.status(500).send(`Erreur Interne avec bcrypt ${err}`);

@@ -27,7 +27,7 @@ function Login() {
           { email, password },
           { withCredentials: true }
         )
-        .then(() => navigate("/adminaccount", { replace: true }))
+        .then(() => navigate("/login/myadmin", { replace: true }))
         .catch((err) => {
           console.error(err);
         });

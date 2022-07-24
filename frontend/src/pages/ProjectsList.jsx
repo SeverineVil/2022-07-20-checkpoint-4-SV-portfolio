@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Project from "../components/Project";
+import Header from "../components/Header";
 import "./styles/ProjectsList.css";
 
 function ProjectsList() {
@@ -16,14 +17,17 @@ function ProjectsList() {
   }, []);
 
   return (
-    <div className="projects-container">
-      <div className="projects-container-title">
-        What I have done
-        {projects.map((e) => (
-          <Project key={e.id} project={e} />
-        ))}
+    <>
+      <Header />
+      <div className="projects-container">
+        <div className="projects-container-title">
+          What I have done
+          {projects.map((e) => (
+            <Project key={e.id} project={e} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default ProjectsList;
